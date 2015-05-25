@@ -1,0 +1,8 @@
+/bin
+/target
+/.settings
+/.classpath
+/.project
+**Thumbs.db
+*.sql
+/target-eclipse
