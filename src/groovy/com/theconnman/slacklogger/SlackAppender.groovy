@@ -14,7 +14,9 @@ class SlackAppender extends org.apache.log4j.AppenderSkeleton implements org.apa
 		event.getRenderedMessage();
 		event.getThrowableStrRep();
 		String logStatement = getLayout().format(event);
-		println logStatement
+		try {
+			SlackMessages.postSlackMessage();
+		} catch (e) { }
     }
 
 	@Override
