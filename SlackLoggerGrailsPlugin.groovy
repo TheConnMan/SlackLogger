@@ -5,7 +5,8 @@ class SlackLoggerGrailsPlugin {
     def grailsVersion = "2.3 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
-        "grails-app/views/error.gsp"
+        "grails-app/controllers/*",
+        "grails-app/views/*"
     ]
 
     // TODO Fill in these fields

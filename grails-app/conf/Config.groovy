@@ -1,12 +1,16 @@
-// configuration for plugin testing - will not be included in the plugin zip
+import com.theconnman.slacklogger.SlackAppender
+
+grails.app.context = '/'
 
 log4j = {
-    // Example of changing the log pattern for the default console
-    // appender:
-    //
-    //appenders {
-    //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
-    //}
+	appenders {
+		console name: 'stdout', threshold: org.apache.log4j.Level.ERROR
+		appender new SlackAppender(name: 'slackAppender', layout: pattern(conversionPattern: '[%p] %d{yyyy-MM-dd HH:mm:ss} %c{2} - %m%n'), threshold: org.apache.log4j.Level.INFO)
+	}
+
+	info 'slackAppender' : [
+		'grails.app.controllers.com.theconnman.slacklogger'
+	]
 
     error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
            'org.codehaus.groovy.grails.web.pages', //  GSP
