@@ -18,7 +18,7 @@ class SlackMessages {
 	static public void postSlackMessage(LoggingEvent event, String logStatement) {
 		def config = Holders.config.grails.plugin.slacklogger;
 		String level = event.getLevel().toString();
-		String attachmentColor = colors[level];
+		String attachmentColor = config.colors ? config.colors[level] : colors[level];
 		Map field = [
 			title: level,
 			value: logStatement,
