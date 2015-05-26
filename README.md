@@ -4,7 +4,7 @@ Slack Logger
 Slack Logger is a custom log4j appender which logs directly to a Slack channel.
 
 <div style="text-align: center;">
-	![Slack Logger](resources/SlackLogger.png)
+	<img src="resources/SlackLogger.png" />
 </div>
 
 ## Requirements
