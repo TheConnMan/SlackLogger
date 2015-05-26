@@ -6,7 +6,8 @@ class SlackLoggerGrailsPlugin {
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
         "grails-app/controllers/*",
-        "grails-app/views/*"
+        "grails-app/views/*",
+		"resources/*"
     ]
 
     // TODO Fill in these fields
