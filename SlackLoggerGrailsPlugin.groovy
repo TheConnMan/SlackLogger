@@ -11,7 +11,7 @@ class SlackLoggerGrailsPlugin {
     ]
 
     // TODO Fill in these fields
-    def title = "Slack Logger Plugin" // Headline display name of the plugin
+    def title = "Slack Logger" // Headline display name of the plugin
     def author = "TheConnMan"
     def authorEmail = "brian@theconnman.com"
     def description = "Slack Logger is a custom log4j appender which logs directly to a Slack channel."
