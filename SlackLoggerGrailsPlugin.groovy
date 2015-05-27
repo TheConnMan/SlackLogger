@@ -17,7 +17,7 @@ class SlackLoggerGrailsPlugin {
     def description = "Slack Logger is a custom log4j appender which logs directly to a Slack channel."
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/slack-logger"
+    def documentation = "https://github.com/TheConnMan/SlackLogger"
 
     // Extra (optional) plugin metadata
 
