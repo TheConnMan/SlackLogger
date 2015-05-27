@@ -3,7 +3,7 @@ Slack Logger
 
 Slack Logger is a custom log4j appender which logs directly to a Slack channel.
 
-![Image of Yaktocat](resources/SlackLogger.png)
+![Slack Logger](https://raw.githubusercontent.com/TheConnMan/SlackLogger/dev/resources/SlackLogger.png)
 
 ## Requirements
 

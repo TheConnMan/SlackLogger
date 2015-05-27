@@ -1,6 +1,6 @@
 class SlackLoggerGrailsPlugin {
     // the plugin version
-    def version = "1.0.0"
+    def version = "1.0.1"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.3 > *"
     // resources that are excluded from plugin packaging
@@ -11,13 +11,13 @@ class SlackLoggerGrailsPlugin {
     ]
 
     // TODO Fill in these fields
-    def title = "Slack Logger Plugin" // Headline display name of the plugin
+    def title = "Slack Logger" // Headline display name of the plugin
     def author = "TheConnMan"
     def authorEmail = "brian@theconnman.com"
     def description = "Slack Logger is a custom log4j appender which logs directly to a Slack channel."
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/slack-logger"
+    def documentation = "https://github.com/TheConnMan/SlackLogger"
 
     // Extra (optional) plugin metadata
 
