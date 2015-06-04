@@ -1,6 +1,8 @@
 Slack Logger
 =========
 
+https://grails.org/plugin/slack-logger
+
 Slack Logger is a custom log4j appender which logs directly to a Slack channel.
 
 ![Slack Logger](https://raw.githubusercontent.com/TheConnMan/SlackLogger/dev/resources/SlackLogger.png)
