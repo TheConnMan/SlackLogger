@@ -24,8 +24,7 @@ class SlackMessages {
 			value: logStatement,
 			short: false
 		];
-		RestBuilder rest = new RestBuilder();
-		def resp = rest.post(config.webhook) {
+		new RestBuilder().post(config.webhook) {
 			json {
 				username = config.botName
 				fallback = logStatement
