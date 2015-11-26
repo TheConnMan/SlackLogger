@@ -1,8 +1,14 @@
 /bin
 /target
+/target-eclipse
 /.settings
 /.classpath
 /.project
 **Thumbs.db
 *.sql
-/target-eclipse
+.DS_Store
+*.log
+/grails-database-migration-*.zip
+/grails-database-migration-*.zip.sha1
+/plugin.xml
+/web-app/WEB-INF
