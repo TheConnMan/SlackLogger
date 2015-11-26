@@ -1,5 +1,5 @@
 class SlackLoggerGrailsPlugin {
-	def version = "1.0.1"
+	def version = "1.0.2"
 	def grailsVersion = "2.3 > *"
 	def pluginExcludes = [
 		"grails-app/controllers/*",
