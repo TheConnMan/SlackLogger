@@ -1,3 +1,4 @@
+import com.theconnman.slacklogger.SlackAppender
 import grails.util.BuildSettings
 import grails.util.Environment
 
@@ -8,7 +9,13 @@ appender('STDOUT', ConsoleAppender) {
 	}
 }
 
-root(ERROR, ['STDOUT'])
+appender('SLACK', SlackAppender) {
+	encoder(PatternLayoutEncoder) {
+		pattern = "%level %logger - %msg%n"
+	}
+}
+
+root(ERROR, ['STDOUT', 'SLACK'])
 
 def targetDir = BuildSettings.TARGET_DIR
 if (Environment.isDevelopmentMode() && targetDir) {

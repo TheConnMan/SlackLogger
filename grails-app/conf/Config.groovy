@@ -6,22 +6,6 @@ def localConfig = new ConfigSlurper(Environment.current.name).parse(new File(loc
 
 grails.app.context = '/'
 
-log4j = {
-	appenders {
-		console name: 'stdout', threshold: org.apache.log4j.Level.ERROR
-		appender new SlackAppender(name: 'slackAppender', layout: pattern(conversionPattern: '%c{2} - %m%n'), threshold: org.apache.log4j.Level.INFO)
-	}
-
-	info 'slackAppender' : [
-		'grails.app.controllers.com.theconnman.slacklogger'
-	]
-
-	error 'org.codehaus.groovy.grails',
-			'org.springframework',
-			'org.hibernate',
-			'net.sf.ehcache.hibernate'
-}
-
 grails {
 	plugin {
 		slacklogger {
