@@ -1,3 +1,4 @@
+import ch.qos.logback.classic.encoder.PatternLayoutEncoder
 import com.theconnman.slacklogger.SlackAppender
 import grails.util.BuildSettings
 import grails.util.Environment
@@ -11,7 +12,7 @@ appender('STDOUT', ConsoleAppender) {
 
 appender('SLACK', SlackAppender) {
 	encoder(PatternLayoutEncoder) {
-		pattern = "%level %logger - %msg%n"
+		pattern = "%logger - %msg%n"
 	}
 }
 
