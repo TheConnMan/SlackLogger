@@ -16,6 +16,4 @@ class SlackLoggerGrailsPlugin extends Plugin {
 	def profiles = ['web']
 	def documentation = "https://github.com/TheConnMan/SlackLogger"
 	def license = "MIT"
-	def issueManagement = [ system: "GitHub", url: "https://github.com/TheConnMan/SlackLogger/issues" ]
-	def scm = [ url: "https://github.com/TheConnMan/SlackLogger" ]
 }

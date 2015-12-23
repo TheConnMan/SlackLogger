@@ -17,7 +17,21 @@ plugins {
 }
 
 version "1.0.2"
-group "org.grails.plugins"
+group "theconnman.plugins"
+
+bintray {
+	pkg {
+		name = "$project.name"
+		licenses = ['MIT']
+		desc = 'Slack Logger is a custom log4j appender which logs directly to a Slack channel.'
+		issueTrackerUrl = "https://github.com/TheConnMan/SlackLogger/issues"
+		vcsUrl = "https://github.com/TheConnMan/SlackLogger"
+		version {
+			attributes = ['grails-plugin': "$project.group:$project.name"]
+			name = project.version
+		}
+	}
+}
 
 apply plugin: 'maven-publish'
 apply plugin: 'eclipse'
