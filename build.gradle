@@ -64,7 +64,7 @@ dependencies {
 
 	console "org.grails:grails-console"
 
-	compile "org.grails.plugins:rest-client-builder:2.1.1"
+	compile "org.grails:grails-datastore-rest-client:5.0.0.RC2"
 }
 
 task wrapper(type: Wrapper) {

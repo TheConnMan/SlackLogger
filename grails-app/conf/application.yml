@@ -65,6 +65,11 @@ grails:
                 scriptlets: html
                 taglib: none
                 staticparts: none
+    plugin:
+        slacklogger:
+            webhook:
+            botName: 'Test Bot'
+            channel: '#testing'
 ---
 hibernate:
     cache:

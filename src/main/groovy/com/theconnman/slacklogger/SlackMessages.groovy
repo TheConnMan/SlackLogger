@@ -1,8 +1,8 @@
-package com.theconnman.slacklogger;
+package com.theconnman.slacklogger
 
-import grails.util.Holders;
-import org.apache.log4j.spi.LoggingEvent;
-import grails.plugins.rest.client.RestBuilder;
+import grails.util.Holders
+import ch.qos.logback.classic.spi.LoggingEvent
+import grails.plugins.rest.client.RestBuilder
 
 class SlackMessages {
 
@@ -13,17 +13,17 @@ class SlackMessages {
 		WARN: '#ff9122',
 		ERROR: '#ff4444',
 		FATAL: '#b03e3c'
-	];
+	]
 
 	static public void postSlackMessage(LoggingEvent event, String logStatement) {
-		def config = Holders.config.grails.plugin.slacklogger;
-		String level = event.getLevel().toString();
-		String attachmentColor = config.colors ? config.colors[level] : colors[level];
+		Map config = Holders.config.grails.plugin.slacklogger
+		String level = event.getLevel().toString()
+		String attachmentColor = config.colors ? config.colors[level] : colors[level]
 		Map field = [
 			title: level,
 			value: logStatement,
 			short: false
-		];
+		]
 		new RestBuilder().post(config.webhook) {
 			json {
 				username = config.botName
