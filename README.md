@@ -38,13 +38,15 @@ All config items contain the prefix **grails.plugin.slacklogger.**
     	```
 
 ## Use
-**Slack Logger** creates a new **Log4j** appender which can be used like a normal appender in `Config.groovy`. Below is an example configuration of a new appender:
+**Slack Logger** creates a new **Logback** appender which can be used like a normal appender in `logback.groovy`. Below is an example configuration of a new appender:
 
 ```
 import com.theconnman.slacklogger.SlackAppender;
 ...
-appenders {
-    appender new SlackAppender(name: 'slackAppender', layout: pattern(conversionPattern: '%c{2} - %m%n'), threshold: org.apache.log4j.Level.INFO)
+appender('SLACK', SlackAppender) {
+	encoder(PatternLayoutEncoder) {
+		pattern = "%logger - %msg%n"
+	}
 }
 ```
 
