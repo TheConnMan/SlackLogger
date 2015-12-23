@@ -3,6 +3,7 @@ package com.theconnman.slacklogger
 class TestController {
 
     def index() {
-		log.info 'Testing logger'
+		log.error 'Testing logger'
+		render(status: 200)
 	}
 }
