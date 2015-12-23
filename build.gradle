@@ -32,9 +32,9 @@ apply from:'https://raw.githubusercontent.com/grails/grails-profile-repository/m
 bintray {
 	pkg {
 		userOrg = 'theconnman'
-		repo = 'plugins'
 		name = "$project.name"
 		licenses = ['MIT']
+		websiteUrl = 'http://theconnman.com/SlackLogger/'
 		desc = 'Slack Logger is a custom log4j appender which logs directly to a Slack channel.'
 		issueTrackerUrl = "https://github.com/TheConnMan/SlackLogger/issues"
 		vcsUrl = "https://github.com/TheConnMan/SlackLogger"

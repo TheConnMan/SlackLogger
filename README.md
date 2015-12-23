@@ -1,5 +1,5 @@
 # Slack Logger
-https://grails.org/plugin/slack-logger
+[ ![Download](https://api.bintray.com/packages/theconnman/plugins/slacklogger/images/download.svg) ](https://bintray.com/theconnman/plugins/slacklogger/_latestVersion)
 
 Slack Logger is a custom log4j appender which logs directly to a Slack channel.
 
@@ -41,7 +41,7 @@ All config items contain the prefix **grails.plugin.slacklogger.**
 **Slack Logger** creates a new **Logback** appender which can be used like a normal appender in `logback.groovy`. Below is an example configuration of a new appender:
 
 ```
-import com.theconnman.slacklogger.SlackAppender;
+import com.theconnman.slacklogger.SlackAppender
 ...
 appender('SLACK', SlackAppender) {
 	encoder(PatternLayoutEncoder) {
