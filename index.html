@@ -34,6 +34,8 @@
         <h1>
 <a id="slack-logger" class="anchor" href="#slack-logger" aria-hidden="true"><span class="octicon octicon-link"></span></a>Slack Logger</h1>
 
+<p><a href="https://bintray.com/theconnman/plugins/slacklogger/_latestVersion"> <img src="https://api.bintray.com/packages/theconnman/plugins/slacklogger/images/download.svg" alt="Download"> </a></p>
+
 <p>Slack Logger is a custom log4j appender which logs directly to a Slack channel.</p>
 
 <p><img src="https://raw.githubusercontent.com/TheConnMan/SlackLogger/dev/resources/SlackLogger.png" alt="Slack Logger"></p>
@@ -102,16 +104,27 @@
 <h2>
 <a id="use" class="anchor" href="#use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use</h2>
 
-<p><strong>Slack Logger</strong> creates a new <strong>Log4j</strong> appender which can be used like a normal appender in <code>Config.groovy</code>. Below is an example configuration of a new appender:</p>
+<p><strong>Slack Logger</strong> creates a new <strong>Logback</strong> appender which can be used like a normal appender in <code>logback.groovy</code>. Below is an example configuration of a new appender:</p>
 
-<pre><code>import com.theconnman.slacklogger.SlackAppender;
+<pre><code>import com.theconnman.slacklogger.SlackAppender
 ...
-appenders {
-    appender new SlackAppender(name: 'slackAppender', layout: pattern(conversionPattern: '%c{2} - %m%n'), threshold: org.apache.log4j.Level.INFO)
+appender('SLACK', SlackAppender) {
+    encoder(PatternLayoutEncoder) {
+        pattern = "%logger - %msg%n"
+    }
 }
 </code></pre>
 
 <p>The appender pattern above will produce messages which look like the image at the top of the readme. Removing the time and the level from the log pattern is recommended because the time and level will appear on the Slack message by default.</p>
+
+<h2>
+<a id="development" class="anchor" href="#development" aria-hidden="true"><span class="octicon octicon-link"></span></a>Development</h2>
+
+<p>To run the project in development clone the repository and run the following:</p>
+
+<div class="highlight highlight-source-shell"><pre>grails-app -Dgrails.SLACK_WEBHOOK=[your Slack webhook] run-app</pre></div>
+
+<p>Then go to http:/localhost:8080/test to receive a test message.</p>
       </section>
     </div>
 
