@@ -1,6 +1,4 @@
-Slack Logger
-=========
-
+# Slack Logger
 https://grails.org/plugin/slack-logger
 
 Slack Logger is a custom log4j appender which logs directly to a Slack channel.
@@ -12,16 +10,13 @@ Slack Logger is a custom log4j appender which logs directly to a Slack channel.
 - Slack account with Incoming WebHooks integration
 
 ## Setup
-
 ### Slack
-
 - Create an [Incoming WebHooks integration](https://my.slack.com/services/new/incoming-webhook)
 - Select a channel to post messages to
 	- **NOTE:** This can be overwritten in the config. This is helpful if multiple projects use the same webhook.
 - Add the WebHook url to the config as shown below
 
 ### Config
-
 All config items contain the prefix **grails.plugin.slacklogger.**
 
 **NOTE:** Config items with * after them are secret information. It is highly reccommended to put this information in secret files and pull it into the Grails project at runtime.
@@ -43,7 +38,6 @@ All config items contain the prefix **grails.plugin.slacklogger.**
     	```
 
 ## Use
-
 **Slack Logger** creates a new **Log4j** appender which can be used like a normal appender in `Config.groovy`. Below is an example configuration of a new appender:
 
 ```
@@ -55,3 +49,11 @@ appenders {
 ```
 
 The appender pattern above will produce messages which look like the image at the top of the readme. Removing the time and the level from the log pattern is recommended because the time and level will appear on the Slack message by default.
+
+## Development
+To run the project in development clone the repository and run the following:
+```bash
+grails-app -Dgrails.SLACK_WEBHOOK=[your Slack webhook] run-app
+```
+
+Then go to http:/localhost:8080/test to receive a test message.

@@ -67,7 +67,7 @@ grails:
                 staticparts: none
     plugin:
         slacklogger:
-            webhook:
+            webhook: '${SLACK_WEBHOOK}'
             botName: 'Test Bot'
             channel: '#testing'
 ---
