@@ -67,7 +67,7 @@ The appender pattern above will produce messages which look like the image at th
 ## Development
 To run the project in development clone the repository and run the following:
 ```bash
-grails-app -Dgrails.SLACK_WEBHOOK=[your Slack webhook] run-app
+grails -Dgrails.SLACK_WEBHOOK=[your Slack webhook] run-app
 ```
 
 Then go to http:/localhost:8080/test to receive a test message.
