@@ -16,6 +16,16 @@ Slack Logger is a custom log4j appender which logs directly to a Slack channel.
 	- **NOTE:** This can be overwritten in the config. This is helpful if multiple projects use the same webhook.
 - Add the WebHook url to the config as shown below
 
+### Dependency managment
+Add this into your ```build.gradle```:
+
+    repositories {
+	maven { url "http://dl.bintray.com/theconnman/plugins" }
+    }
+    dependencies {
+	compile "org.grails.plugins:slacklogger:2.0.2"
+    }
+
 ### Config
 All config items contain the prefix **grails.plugin.slacklogger.**
 
