@@ -20,10 +20,10 @@ Slack Logger is a custom log4j appender which logs directly to a Slack channel.
 Add this into your ```build.gradle```:
 
     repositories {
-	maven { url "http://dl.bintray.com/theconnman/plugins" }
+	    maven { url "http://dl.bintray.com/theconnman/plugins" }
     }
     dependencies {
-	compile "org.grails.plugins:slacklogger:2.0.2"
+	    compile "org.grails.plugins:slacklogger:2.0.2"
     }
 
 ### Config
