@@ -19,6 +19,6 @@ class SlackAppender extends UnsynchronizedAppenderBase {
 		String logStatement = output.toString('UTF-8')
 		try {
 			SlackMessages.postSlackMessage((LoggingEvent)event, logStatement)
-		} catch (e) { }
+		} catch (e) { e.printStackTrace() }
 	}
 }
